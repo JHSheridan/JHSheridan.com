@@ -1,0 +1,46 @@
+// ---------------------------------
+// File: _layout.scss
+// Description: Global layout styles
+// ---------------------------------
+
+#site-header { grid-area: header; }
+#site-main   { grid-area: main; }
+#site-footer { grid-area: footer; }
+
+#site-container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin-bottom: 90px;
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  @media only screen and (min-width: 1100px) {
+    grid:
+      "header main" auto
+      "footer footer" auto
+      / 30% 70%;
+  }
+}
+
+
+#site-main {
+  max-width: 800px;
+
+  @media only screen and (min-width: 700px) and (max-width: 1100px) {
+    margin: 0 0 0 56px;
+  }
+  @media only screen and (min-width: 1100px) {
+    padding: 142px 0 0 50px;
+  }
+}
+
+body.home {
+  #site-main {
+    @media only screen and (min-width: 1100px) {
+      padding: 155px 0 0 50px;
+    }
+  }
+}

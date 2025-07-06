@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on John H. Sheridan</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on John H. Sheridan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Mar 2024 16:12:18 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 28 Mar 2024 16:12:18 -0400</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;img src=&#34;jhsheridan.jpg&#34; style=&#34;float:right; max-width: 175px; border: 8px solid #FFF; margin: 0 0 20px 20px;&#34; /&gt;&#xA;&lt;p&gt;My full name is John Hunter Sheridan, and I was born and raised in a census-designated place called Dalzell, South Carolina (population 2,260). When I was younger, I thought this was lame. Now that I&amp;rsquo;m older and I&amp;rsquo;ve lived in quite a few large cities all across the world, I think it&amp;rsquo;s the luckiest thing that ever happened to me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Thu, 28 Mar 2024 16:12:18 -0400</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;!-- ### Current Workload 😅&#xA;&#xA;&lt;progress value=&#34;90&#34; max=&#34;100&#34; style=&#34;--value: 90; --max: 100;&#34;&gt;&lt;/progress&gt;&#xA;&#xA;I&#39;m currently nearly at capacity. I&#39;ll have availibility for new projects in late July, but you should reach out to me now if you want to get on the calendar. --&gt;&#xA;&lt;h4 id=&#34;im-very-easy-to-reach&#34;&gt;I&amp;rsquo;m very easy to reach.&lt;/h4&gt;&#xA;&lt;div class=&#34;contact-info&#34;&gt;&#xA;&lt;p&gt;&lt;strong&gt;📬 Email me:&lt;/strong&gt; &lt;a href=&#34;mailto:contact@jhsheridan.com&#34;&gt;&lt;a href=&#34;mailto:contact@jhsheridan.com&#34;&gt;contact@jhsheridan.com&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;💬 Signal:&lt;/strong&gt; JHSheridan.11&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;contact-form&#34;&gt;&#xA;  &lt;h4&gt;Use this form to reach me directly&lt;/h4&gt;&#xA;  &lt;!-- &lt;p&gt;☎️ This form is like the red phone on the President&#39;s desk. ☎️&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Work</title>
+      <link>http://localhost:1313/work/</link>
+      <pubDate>Thu, 28 Mar 2024 16:12:18 -0400</pubDate>
+      <guid>http://localhost:1313/work/</guid>
+      <description>&lt;div class=&#34;page-meta&#34;&gt;&#xA;  &lt;div class=&#34;meta-item meta-item-button&#34;&gt;&#xA;    &lt;a class=&#34;meta-button&#34; href=&#34;#&#34;&gt;Hire&amp;nbsp;Me&lt;/a&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Experience&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;19 Years&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Languages&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;PHP, Javascript, Python&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Frameworks&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;Wordpress, JQuery&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;current-workload-&#34;&gt;Current Workload 😅&lt;/h3&gt;&#xA;&lt;p&gt;&lt;progress value=&#34;90&#34; max=&#34;100&#34; style=&#34;--value: 90; --max: 100;&#34;&gt;&lt;/progress&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re like most of my clients, you probably just figured out you need &lt;em&gt;something&lt;/em&gt; on the internet, but you don&amp;rsquo;t know exactly what it is yet. I&amp;rsquo;ll help you figure that out, and then we&amp;rsquo;ll build it together.&lt;/p&gt;&#xA;&lt;div class=&#34;services-container&#34;&gt;&#xA;&lt;h3 id=&#34;what-i-can-do-for-you&#34;&gt;What I can do for you&lt;/h3&gt;&#xA;&lt;div class=&#34;services&#34;&gt;&#xA;  &lt;div class=&#34;service&#34;&gt;&#xA;    &lt;img src=&#34;icon-leadership.png&#34; style=&#34;width: 40px;&#34; /&gt;&#xA;    &lt;h1&gt;Decisive Leadership&lt;/h1&gt;&#xA;    &lt;p&gt;Sometimes you need someone to come in and take responsibility for your problems. Pass me the baton, and I&#39;ll run.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>http://localhost:1313/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-3/</guid>
+      <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Canton, NC</title>
+      <link>http://localhost:1313/now/24-06-22_canton/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/now/24-06-22_canton/</guid>
+      <description>&lt;h2 id=&#34;what-im-doing-right-now&#34;&gt;What I&amp;rsquo;m doing &lt;span class=&#34;title-em&#34;&gt;right now&lt;/span&gt;&lt;/h2&gt;&#xA;&lt;div class=&#34;home-page-meta&#34;&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Location &lt;span class=&#34;emoji&#34;&gt;📌&lt;/span&gt;&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;Canton, NC&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Timezone &lt;span class=&#34;emoji&#34;&gt;🕓&lt;/span&gt;&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;Eastern Standard&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;meta-item&#34;&gt;&#xA;    &lt;p class=&#34;label&#34;&gt;Last Updated &lt;span class=&#34;emoji&#34;&gt;⌛&lt;/span&gt;&lt;/p&gt;&#xA;    &lt;p class=&#34;property&#34;&gt;June 21st, 2024&lt;/p&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div id=&#34;globeViz&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;canton-nc-has-become-our-home-base&#34;&gt;Canton, NC has become our home base&lt;/h3&gt;&#xA;&lt;p style=&#34;max-width: 530px;&#34;&gt;Since 2018, Briana and I have lived just about everywhere within a 30 mile radius of Asheville, North Carolina - small towns like Barnardsville, Mars Hill, Weaverville, Black Mountain, Swannanoa, Fletcher, and a handful of other places.&lt;/p&gt;&#xA;&lt;p&gt;In September of 2023, we came 20 miles west of Asheville to Canton. We  found a flexible renting arrangement that still allows us to travel, and plan to stick around as long as they&#39;ll have us (or until we buy a place of our own).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/posts/post-1/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

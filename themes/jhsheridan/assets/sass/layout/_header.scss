@@ -1,0 +1,310 @@
+#site-header {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 25px 0 35px 0;
+
+  @media only screen and (min-width: 1100px) {
+    display: block;
+    border-right: 1px solid rgba(255,255,255, 0.1);
+    border-bottom: none;
+    padding: 65px 0 0 0;
+    margin-top: 68px;
+  }
+
+  #banner {
+    @include clearfix;
+    @media only screen and (min-width: 1100px) {
+      float: right;
+      padding-right: 50px;
+    }
+  }
+
+  img {
+    display: none;
+    @media only screen and (min-width: 350px) {
+      display: block;
+      float: left;
+      max-width: 45px;
+    }
+    @media only screen and (min-width: 1100px) {
+      float: right;
+      max-width: 60px;
+    }
+  }
+
+  .name-description {
+    float: left;
+    @media only screen and (min-width: 350px) {
+      padding: 0 0 0 10px;
+    }
+    @media only screen and (min-width: 1100px) {
+      float: right;
+      clear: both;
+      margin-top: 7px;
+    }
+
+    .site-name {
+      font-weight: 600;
+      font-size: 24px;
+      margin: 0;
+      @media only screen and (min-width: 1100px) {
+        font-size: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+
+    .site-description {
+      font-weight: 400;
+      font-size: 13px;
+      margin: 0;
+      @media only screen and (min-width: 1100px) {
+        font-size: 18px;
+        text-align: right;
+      }
+
+      br {
+        display: none;
+        @media only screen and (min-width: 1100px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+// Full menu
+#full-menu {
+  display: none;
+
+  flex-grow: 1; //tells menu to grow to fill remaining space to the right of the banner
+  @media only screen and (min-width: 700px) {
+    display: block;
+  }
+  @media only screen and (min-width: 1100px) {
+    float: right;
+    clear: both;
+    padding-right: 50px;
+    margin-top: 20px;
+  }
+
+  nav {
+    float: right; 
+    @media only screen and (min-width: 1100px) {
+      float: none;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 13px 0 0 0;
+
+      li {
+	float: left;
+	margin-left: 20px;
+	@media only screen and (min-width: 1100px) {
+	  float: none;
+	  text-align: right;
+	  margin-bottom: 10px;
+	}
+
+	a {
+	  color: $white;
+	  text-decoration: none;
+	  @media only screen and (min-width: 1100px) {
+	    font-size: 21px; 
+	    opacity: 0.8;
+
+	    &:hover { opacity: 1; }
+	  }
+	}
+	.active {
+	  font-weight: 500;
+	  text-decoration: underline;
+	  opacity: 1;
+	}
+      }
+    }
+  }
+}
+
+// Mobile menu modified from https://codepen.io/paulocesarpcfj/pen/mJgoez
+#mobile-menu {
+  flex-grow: 1; //tells menu to grow to fill remaining space to the right of the banner
+  @media only screen and (min-width: 700px) {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+}
+
+.open {
+  background-color: $white;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+
+.open:before {
+  content: "";
+  background-color: $white;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after {
+  content: "";
+  background-color: $white;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  width: 24px;
+  height: 20px;
+  display: block;
+  padding: 13px 0 0 0;
+  cursor: pointer;
+  float: right;
+}
+
+.menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(141, 0, 1, 0.85);
+}
+
+.menu label {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent {
+  position: relative;
+  top: 30%;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -170px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 10px 0;
+}
+
+.menu ul li a:hover {
+  color: $red;
+}
+
+.menu ul li:hover {
+  background: rgba(255,255,255,.9);
+}
+
+.menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open {
+  background-color: transparent;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
+}
+
+// Blinking effect for nav links when teasers are hovered
+.nav-blink {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  transform: scale(1.05) !important;
+  transition: all 0.1s ease !important;
+  font-weight: 500 !important;
+}

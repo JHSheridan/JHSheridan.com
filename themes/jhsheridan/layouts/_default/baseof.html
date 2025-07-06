@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="kind-{{ .Kind }}{{ with .Type }} type-{{ . }}{{ end }}{{ with .Section }} section-{{ . }}{{ end }}{{ if not .Section }}{{ $urlParts := split .RelPermalink "/" }}{{ if gt (len $urlParts) 2 }} section-{{ index $urlParts 1 }}{{ end }}{{ end }}{{ if .IsHome }} home{{ end }}">
+  <div id="site-container">
+    <header id="site-header">
+      {{ partial "header.html" . }}
+    </header>
+    <main id="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer id="site-footer">
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+
+</html>

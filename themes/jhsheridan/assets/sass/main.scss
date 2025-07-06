@@ -1,0 +1,16 @@
+// Importing other SCSS files
+@import "base/reset.scss";
+@import "base/variables.scss";
+@import "base/mixins.scss";
+@import "base/webfonts.scss";
+@import "base/base.scss";
+
+@import "layout/layout.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+@import "pages/home.scss";
+@import "pages/work.scss";
+@import "pages/contact.scss";
+
+@import "components/progress-bar.scss";

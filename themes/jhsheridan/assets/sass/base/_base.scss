@@ -1,0 +1,79 @@
+//----------------------------
+// File: _base.scss
+// Description: 
+//----------------------------
+
+// Global body style
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  // Red border at top of site
+  border-top: 6px solid #8D0001;
+  
+  // Default Site Colors
+  color: #EFEDEA;
+  background-color: #202B33;
+
+  // Default Font Settings
+  font-family: Magdelin;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+// Base Typography
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  &:first-of-type { // Rules for page titles 
+    margin-top: 0;
+    margin-bottom: 19px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 15px;
+}
+
+h4 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 15px;
+}
+
+p {
+  margin: 0 0 12px 0;
+  max-width: 600px;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  max-width: 600px;
+}
+
+a {
+  color: $white;
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: square;
+
+  li {
+    padding-bottom: 4px;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+

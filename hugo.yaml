@@ -1,0 +1,30 @@
+baseURL: 'https://jhsheridan.com/'
+languageCode: en-us
+title: John H. Sheridan
+theme: jhsheridan
+
+# Main Navigation
+menus:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
+    - name: Now
+      pageRef: /now/
+      weight: 20
+    - name: Work
+      pageRef: /work/
+      weight: 30
+    - name: About
+      pageRef: /about/
+      weight: 40
+    - name: Contact
+      pageRef: /contact/
+      weight: 60
+
+# Markup Rendering
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+

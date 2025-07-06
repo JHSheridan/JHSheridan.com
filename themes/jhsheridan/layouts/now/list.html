@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+
+  {{ $firstPost := where .Site.RegularPages "Type" "now" | first 1 }}
+  {{ range $firstPost }}
+    <article>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }} 
