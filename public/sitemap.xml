@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/now/2025-08-29_lisbon/</loc>
+    <lastmod>2025-08-29T06:41:12-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-03-28T16:12:18-04:00</lastmod>
   </url><url>
@@ -26,7 +29,7 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/now/24-06-22_canton/</loc>
+    <loc>http://localhost:1313/now/2024-06-22_canton/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/post-1/</loc>

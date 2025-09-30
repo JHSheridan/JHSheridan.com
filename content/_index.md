@@ -8,9 +8,9 @@ draft = false
 
 <a href="/now/" class="teaser">
 
-  ### <span class="emoji">🌎 </span>Now
+  <h2 class="home-section-title"><span class="emoji">🌎 </span>Now</h2>
 
-  I spend about half the year in the Great Smoky Mountains of<br />western North Carolina and about half the year abroad.
+  I spend about 9 months of the year in the Great Smoky Mountains<br />of western North Carolina and about 3 months abroad.
 
   <p><span class="cta">See where I am now</span> <span class="arrow">&rarr;</span></p>
 

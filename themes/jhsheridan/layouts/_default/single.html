@@ -2,9 +2,9 @@
   <!--<h1>{{ .Title }}</h1>-->
 
   {{ if eq .Params.custom_title_enabled true }}
-    <h2>{{ .Params.custom_title_value }}</h2>
+    <h1 class="page-title">{{ .Params.custom_title_value }}</h2>
   {{ else }}
-    <h2>{{ .Title }}</h2>
+    <h1 class="page-title">{{ .Title }}</h2>
   {{ end }}
 
 

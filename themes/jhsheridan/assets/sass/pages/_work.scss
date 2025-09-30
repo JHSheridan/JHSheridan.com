@@ -1,7 +1,7 @@
 .page-meta {
   display: flex;
   column-gap: 50px;
-  margin: 10px 0 8px 0;
+  margin: -6px 0 18px 0;
 
   .meta-item {
     align-content: center;
@@ -13,15 +13,6 @@
       margin-bottom: 0 !important;
       color: rgba(232,230,228,.60);
     }
-
-    .meta-button {
-      background-color: $red;
-      padding: 9px 12px;
-      font-weight: 600;
-      font-size: 19px;
-      border: $white solid 3px;
-      text-decoration: none !important;
-    }
   }
 
   .meta-item-button {
@@ -29,71 +20,153 @@
   }
 }
 
-blockquote {
-  margin: 25px 0;
+.meta-button {
+  background-color: $red;
+  padding: 9px 12px;
+  font-weight: 600;
   font-size: 19px;
-  background-color: rgba(255,255,255,.08);
-  padding: 18px 18px;
-  border-radius: 4px;
-  border: rgba(255,255,255,.3) solid 1px;
-  border-left: $red solid 5px;
-
-  footer {
-    display: block;
-    border: none;
-    text-align: right;
-    font-size: 17px;
-  }
+  border: $white solid 3px;
+  text-decoration: none !important;
 }
 
+.container {
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  padding: 20px 0 30px 0;
+}
+
+.workload {
+  padding: 5px 0 30px 0;
+
+  h2 {
+    margin: 0;
+  }
+}
 
 .services-container {
-  margin: 25px 0;
-  border-top: 1px solid rgba(255,255,255,.2);
-  border-bottom: 1px solid rgba(255,255,255,.2);
-  padding: 15px 0;
-}
-.services {
-  display: flex;
-  flex-wrap: wrap;
 
-  .service {
-    flex: 50%;
-    padding: 0 30px 10px 0;
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
 
-    h1 {
-      font-size: 25px !important;
-      margin-bottom: 0 !important;
-      font-weight: 600;
-    }
+    .service {
+      flex: 50%;
+      padding: 0 30px 10px 0;
 
-    p {
-      font-size: 18px;
+      h3 {
+        font-size: 24px !important;
+        margin: 5px 0 2px 0 !important;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   }
 }
 
+.work {
 
-.work-gallery {
-  list-style-type: none !important;
-  padding: 0 !important;
-  margin: 30px 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  //width: 125%;
-  width: 100%;
-
-  li {
-    max-width: 160px;
-    margin: 0 20px 20px 0;
+  .work-gallery {
+    list-style-type: none !important;
     padding: 0 !important;
-    border: 8px solid #FFF;
-    a {
-      img {
-        width: 100%;
-        display: block;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      max-width: 160px;
+      margin: 0 20px 20px 0;
+      padding: 0 !important;
+      border: 8px solid #FFF;
+      a {
+        img {
+          width: 100%;
+          display: block;
+        }
       }
     }
+  }
+}
+
+// FAQ Section Styles
+.faq {
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .faq-item {
+
+    label {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      position: relative;
+      padding-left: 25px;
+
+      h3 {
+        cursor: pointer;
+        margin: 0 0 0 0 !important;
+        padding: 15px 0;
+        font-size: 23px !important;
+        font-weight: 500;
+      }
+
+      // Add a plus/minus indicator
+      &::after {
+        content: '+';
+        position: absolute;
+        left: 0;
+        top: 45%;
+        transform: translateY(-50%);
+        font-size: 27px;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+        color: $white;
+      }
+
+    }
+
+      p {
+        margin: 0;
+        padding-left: 25px;
+        font-size: 18px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.2s ease, opacity 0.2s ease, margin 0.2s ease;
+      }
+
+    // When the checkbox is checked, show the content
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked {
+      + label {
+        &::after {
+          content: '−';
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
+
+      ~ p {
+        max-height: 500px; // Adjust based on your content
+        opacity: 1;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+.ready {
+  border-bottom: none;
+
+  .meta-button {
+    display: inline-block;
+    margin-top: 5px;
   }
 }

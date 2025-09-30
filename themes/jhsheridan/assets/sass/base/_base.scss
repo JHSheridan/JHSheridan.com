@@ -18,37 +18,52 @@ body {
 
   // Default Font Settings
   font-family: Magdelin;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.35;
 }
 
 // Base Typography
-h2 {
-  font-size: 36px;
+// ----------------
+
+h1, h2, h3, h4, h5 {
   font-weight: 600;
-  &:first-of-type { // Rules for page titles 
-    margin-top: 0;
-    margin-bottom: 19px;
-  }
+}
+
+.home-section-title {
+  font-size: 26px;
+}
+
+.page-title {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 29px;
+  margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 h3 {
   font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 4px;
   margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 h4 {
   font-size: 23px;
-  font-weight: 600;
-  margin-bottom: 4px;
   margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 p {
   margin: 0 0 12px 0;
-  max-width: 600px;
+  max-width: 30em;
 }
 
 em {
