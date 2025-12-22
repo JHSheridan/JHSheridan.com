@@ -6,8 +6,15 @@
     <description>Recent content in Now on John H. Sheridan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Aug 2025 06:41:12 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 24 Sep 2025 06:41:12 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/now/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Canton, North</title>
+      <link>http://localhost:1313/now/2025-08-29_canton/</link>
+      <pubDate>Wed, 24 Sep 2025 06:41:12 -0400</pubDate>
+      <guid>http://localhost:1313/now/2025-08-29_canton/</guid>
+      <description>&lt;p&gt;Test Canton 2&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lisbon, Portugal</title>
       <link>http://localhost:1313/now/2025-08-29_lisbon/</link>

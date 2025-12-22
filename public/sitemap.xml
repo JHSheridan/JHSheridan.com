@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/now/2025-08-29_canton/</loc>
+    <lastmod>2025-09-24T06:41:12-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/now/2025-08-29_lisbon/</loc>
     <lastmod>2025-08-29T06:41:12-04:00</lastmod>
   </url><url>
