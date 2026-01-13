@@ -5,7 +5,8 @@
 
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    <!--{{ .Summary }}-->
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <p>{{ $dateHuman }}</p>
   {{ end }}
 
 {{ end }} 

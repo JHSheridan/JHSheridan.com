@@ -46,7 +46,7 @@ longitude = -82.8373558
 
   I completely ruptured my Achilles tendon playing basketball in February 2023. While I'm technically fully healed at this point, I'm nowhere near back to in shape enough to play basketball, do muay thai, or anything else of the sort.
 
-  <img src="/muay-thai.jpg" title="abc" style="max-width: 635px; border: 8px solid #FFF; margin: 20px 0 0px 0;" />
+  <img src="muay-thai.jpg" title="abc" style="max-width: 635px; border: 8px solid #FFF; margin: 20px 0 0px 0;" />
   
 </div>
 

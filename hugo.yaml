@@ -10,7 +10,7 @@ menus:
       pageRef: /
       weight: 10
     - name: Now
-      pageRef: /now/2025-08-29_Lisbon/
+      pageRef: /now/
       weight: 20
     - name: Work
       pageRef: /work/
