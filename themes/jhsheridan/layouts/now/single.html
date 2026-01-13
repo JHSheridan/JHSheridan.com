@@ -15,6 +15,7 @@
   */}}
 
   {{ $content := .Content }}
+  {{/* Inject globe coordinates */}}
   {{ if and .Params.latitude .Params.longitude }}
     {{ $content = replace $content `<div id="globeViz"></div>` (printf `<div id="globeViz" data-latitude="%.6f" data-longitude="%.6f"></div>` .Params.latitude .Params.longitude) }}
   {{ end }}

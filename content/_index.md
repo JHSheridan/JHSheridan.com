@@ -30,7 +30,7 @@ draft = false
 
   ### <span class="emoji">🙋‍♂️ </span>About
 
-  Who I am outsite of work.
+  Who I am outside of work.
 
   <p><span class="cta">More about me personally</span> <span class="arrow">&rarr;</span></p>
 

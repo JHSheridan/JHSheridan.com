@@ -1,0 +1,30 @@
+{{/*
+  Styled image shortcode with optional caption
+  
+  Parameters:
+    - src: image filename (required)
+    - caption: image caption (optional)
+    - alt: alt text (optional)
+    - maxwidth: max width, default "635px" (optional)
+    - float: "left" or "right" (optional)
+*/}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $maxwidth := .Get "maxwidth" | default "635px" -}}
+{{- $float := .Get "float" | default "" -}}
+
+{{- $style := printf "max-width: %s; border: 8px solid #FFF;" $maxwidth -}}
+{{- if eq $float "right" -}}
+  {{- $style = printf "%s float: right; margin: 0 0 20px 20px;" $style -}}
+{{- else if eq $float "left" -}}
+  {{- $style = printf "%s float: left; margin: 0 20px 20px 0;" $style -}}
+{{- end -}}
+
+<figure class="styled-image{{ with $float }} float-{{ . }}{{ end }}">
+  <img src="{{ $src }}" alt="{{ $alt }}" style="{{ $style }}" />
+  {{- with $caption }}
+  <figcaption class="cap">{{ . }}</figcaption>
+  {{- end }}
+</figure>

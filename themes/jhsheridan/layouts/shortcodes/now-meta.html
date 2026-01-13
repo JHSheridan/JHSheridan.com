@@ -1,0 +1,30 @@
+{{/*
+  Now page meta section shortcode
+  
+  Parameters:
+    - location: the location name (required)
+    - timezone: the timezone name (required)
+*/}}
+
+{{- $location := .Get "location" | default "Unknown" -}}
+{{- $timezone := .Get "timezone" | default "Unknown" -}}
+{{- $date := .Page.Date | time.Format "January 2, 2006" -}}
+
+<div class="now-page-meta">
+  <div class="meta-item">
+    <p class="label">Location <span class="emoji">📌</span></p>
+    <p class="property">{{ $location }}</p>
+  </div>
+  
+  <div class="meta-item">
+    <p class="label">Timezone <span class="emoji">🕓</span></p>
+    <p class="property">{{ $timezone }}</p>
+  </div>
+  
+  <div class="meta-item">
+    <p class="label">Last Updated <span class="emoji">⌛</span></p>
+    <p class="property">{{ $date }}</p>
+  </div>
+  
+  <div id="globeViz"></div>
+</div>
