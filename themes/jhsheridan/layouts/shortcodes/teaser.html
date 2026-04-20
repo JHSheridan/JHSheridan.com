@@ -1,0 +1,20 @@
+{{/*
+  Homepage teaser card shortcode
+
+  Parameters:
+    - href: link destination (required)
+    - emoji: emoji character (required)
+    - title: card title (required)
+    - cta: call-to-action text (required)
+*/}}
+
+{{- $href := .Get "href" -}}
+{{- $emoji := .Get "emoji" -}}
+{{- $title := .Get "title" -}}
+{{- $cta := .Get "cta" -}}
+
+<a href="{{ $href }}" class="teaser">
+  <h2 class="home-section-title"><span class="emoji">{{ $emoji }} </span>{{ $title }}</h2>
+  {{ .Inner }}
+  <p><span class="cta">{{ $cta }}</span> <span class="arrow">&rarr;</span></p>
+</a>

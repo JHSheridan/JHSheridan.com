@@ -3,6 +3,12 @@ languageCode: en-us
 title: John H. Sheridan
 theme: jhsheridan
 
+params:
+  description:
+    - "Programmer, Designer,"
+    - "Perpetual Traveler"
+  metaDescription: "John H. Sheridan — Programmer, Designer, and Perpetual Traveler. Nearly 20 years of experience building websites and applications."
+
 # Main Navigation
 menus:
   main:
@@ -12,6 +18,8 @@ menus:
     - name: Now
       pageRef: /now/
       weight: 20
+      params:
+        linkLatest: true
     - name: Work
       pageRef: /work/
       weight: 30

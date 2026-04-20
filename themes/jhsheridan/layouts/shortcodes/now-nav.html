@@ -1,0 +1,35 @@
+{{/*
+  Now page previous/next navigation
+
+  Parameters:
+    - prev: previous location name (optional)
+    - prevhref: previous location link (optional)
+    - next: next location name (optional)
+    - nexthref: next location link (optional)
+*/}}
+
+{{- $prev := .Get "prev" -}}
+{{- $prevhref := .Get "prevhref" | default "#" -}}
+{{- $next := .Get "next" -}}
+{{- $nexthref := .Get "nexthref" -}}
+
+<hr />
+
+*This is a [now page](https://nownownow.com/about). If you have your own site, you should make one, too.*
+
+<div class="now-nav">
+  {{- with $prev }}
+  <div class="item last">
+    <p class="title"><span class="emoji">⏮️</span> Last Location</p>
+    <a href="{{ $prevhref }}" class="place">{{ . }}</a>
+  </div>
+  {{- end }}
+  {{- with $next }}
+  <div class="item next">
+    <p class="title"><span class="emoji">✈️</span> Next Location</p>
+    <a{{ with $nexthref }} href="{{ . }}"{{ end }} class="place">{{ $next }}</a>
+  </div>
+  {{- end }}
+</div>
+
+<a href="/now">See all now posts</a>

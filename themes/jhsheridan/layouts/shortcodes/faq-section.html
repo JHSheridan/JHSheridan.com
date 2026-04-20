@@ -1,0 +1,13 @@
+{{/*
+  FAQ section wrapper
+
+  Parameters:
+    - title: section heading (required)
+*/}}
+
+{{- $title := .Get "title" -}}
+
+<div class="faq container">
+  <h2>{{ $title }}</h2>
+  {{ .Inner }}
+</div>

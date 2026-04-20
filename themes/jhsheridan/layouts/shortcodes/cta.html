@@ -1,0 +1,17 @@
+{{/*
+  Call-to-action block
+
+  Parameters:
+    - title: heading text (required)
+    - button: button text (required)
+    - href: button link (optional, default "#")
+*/}}
+
+{{- $title := .Get "title" -}}
+{{- $button := .Get "button" -}}
+{{- $href := .Get "href" | default "#" -}}
+
+<div class="ready container">
+  <h2>{{ $title }}</h2>
+  <a class="meta-button" href="{{ $href }}">{{ $button }}</a>
+</div>

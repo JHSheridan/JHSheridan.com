@@ -1,0 +1,12 @@
+{{/*
+  Generic content section wrapper
+
+  Parameters:
+    - class: CSS class name (required)
+*/}}
+
+{{- $class := .Get "class" -}}
+
+<div class="{{ $class }} container">
+  {{ .Inner | markdownify }}
+</div>

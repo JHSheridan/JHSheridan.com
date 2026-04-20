@@ -1,0 +1,15 @@
+{{/*
+  Goal card for Now pages
+
+  Parameters:
+    - emoji: emoji character (required)
+    - title: goal title (required)
+*/}}
+
+{{- $emoji := .Get "emoji" -}}
+{{- $title := .Get "title" -}}
+
+<div class="goal">
+  <h4><span class="emoji">{{ $emoji }}</span> {{ $title }}</h4>
+  {{ .Inner }}
+</div>

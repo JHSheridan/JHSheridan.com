@@ -1,0 +1,31 @@
+{{/*
+  Page meta bar with optional button and key/value items
+
+  Parameters:
+    - button: button text (optional)
+    - buttonhref: button link (optional, default "#")
+
+  Inner content: one key/value pair per line, separated by |
+    Example: Experience|19 Years
+*/}}
+
+<div class="page-meta">
+  {{- with .Get "button" }}
+  <div class="meta-item meta-item-button">
+    <a class="meta-button" href="{{ $.Get "buttonhref" | default "#" }}">{{ . }}</a>
+  </div>
+  {{- end }}
+  {{- $items := split .Inner "\n" }}
+  {{- range $items }}
+    {{- $trimmed := strings.TrimSpace . }}
+    {{- if $trimmed }}
+      {{- $parts := split $trimmed "|" }}
+      {{- if ge (len $parts) 2 }}
+  <div class="meta-item">
+    <p class="label">{{ index $parts 0 }}</p>
+    <p class="property">{{ index $parts 1 }}</p>
+  </div>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+</div>

@@ -1,0 +1,16 @@
+{{/*
+  Service card shortcode
+
+  Parameters:
+    - emoji: emoji character (required)
+    - title: service name (required)
+*/}}
+
+{{- $emoji := .Get "emoji" -}}
+{{- $title := .Get "title" -}}
+
+<div class="service">
+  <span class="service-emoji">{{ $emoji }}</span>
+  <h3>{{ $title }}</h3>
+  <p>{{ .Inner }}</p>
+</div>

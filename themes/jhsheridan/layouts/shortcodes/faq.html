@@ -1,0 +1,24 @@
+{{/*
+  FAQ accordion item (CSS checkbox toggle)
+
+  Parameters:
+    - question: the question text (required)
+    - id: unique id for the toggle (required)
+*/}}
+
+{{- $question := .Get "question" -}}
+{{- $id := .Get "id" -}}
+
+<div class="faq-item">
+  <input type="checkbox" id="{{ $id }}" />
+  <label for="{{ $id }}">
+    <h3>{{ $question }}</h3>
+  </label>
+  {{- $paragraphs := split .Inner "\n\n" }}
+  {{- range $paragraphs }}
+    {{- $trimmed := strings.TrimSpace . }}
+    {{- with $trimmed }}
+  <p>{{ . }}</p>
+    {{- end }}
+  {{- end }}
+</div>

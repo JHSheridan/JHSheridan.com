@@ -1,0 +1,15 @@
+{{/*
+  Work gallery section wrapper
+
+  Parameters:
+    - title: section heading (required)
+*/}}
+
+{{- $title := .Get "title" -}}
+
+<div class="work container">
+  <h2>{{ $title }}</h2>
+  <ul class="work-gallery">
+    {{ .Inner }}
+  </ul>
+</div>

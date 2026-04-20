@@ -1,0 +1,25 @@
+{{/*
+  Work gallery item — linked screenshot
+
+  Parameters:
+    - href: link to the site (required)
+    - src: image filename (required)
+*/}}
+
+{{- $href := .Get "href" -}}
+{{- $src := .Get "src" -}}
+{{- $image := .Page.Resources.GetMatch $src -}}
+{{- $imgSrc := $src -}}
+
+{{- if $image -}}
+  {{- if gt $image.Width 1200 -}}
+    {{- $image = $image.Resize "1200x webp" -}}
+  {{- else -}}
+    {{- $image = $image.Process "webp" -}}
+  {{- end -}}
+  {{- $imgSrc = $image.RelPermalink -}}
+{{- end -}}
+
+<li>
+  <a href="{{ $href }}" target="_blank"><img src="{{ $imgSrc }}" loading="lazy" /></a>
+</li>

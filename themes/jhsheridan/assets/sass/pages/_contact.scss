@@ -4,7 +4,33 @@
   padding: 14px 12px 4px 12px;
   max-width: 380px;
   background-color: rgba(255,255,255,.05);
-  font-size: 19px;
+  font-size: 17px;
+
+  .pgp-key {
+    margin-top: 8px;
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .pgp-fingerprint {
+      font-family: monospace;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background-color: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 10px;
+      font-size: 13px;
+      margin: 8px 0 12px 0;
+    }
+  }
 }
 
 .contact-form {
@@ -62,15 +88,6 @@ form.contact-page {
   }
 
   .button-field {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    p {
-      font-size: 18px;
-      margin-bottom: 0 !important;
-    }
-
     button {
       font-family: magdelin;
       font-size: 23px;
@@ -79,6 +96,7 @@ form.contact-page {
       border: 3px solid #FFF;
       color: #FFF;
       padding: 5px 14px;
+      float: right;
 
       &:hover {
         background-color: #ab1b1c;

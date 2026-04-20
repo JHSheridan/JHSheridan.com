@@ -1,0 +1,15 @@
+{{/*
+  Services section wrapper
+
+  Parameters:
+    - title: section heading (required)
+*/}}
+
+{{- $title := .Get "title" -}}
+
+<div class="services-container container">
+  <h2>{{ $title }}</h2>
+  <div class="services">
+    {{ .Inner }}
+  </div>
+</div>

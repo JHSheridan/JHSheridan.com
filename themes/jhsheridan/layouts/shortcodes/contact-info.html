@@ -1,0 +1,10 @@
+{{/*
+  Contact info block with social links
+
+  Usage: {{< contact-info >}}
+  Content is rendered as inner markdown.
+*/}}
+
+<div class="contact-info">
+  {{ .Inner | markdownify }}
+</div>

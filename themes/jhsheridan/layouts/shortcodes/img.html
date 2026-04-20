@@ -1,29 +1,37 @@
 {{/*
   Styled image shortcode with optional caption
+  Uses Hugo's resource system for automatic optimization
   
   Parameters:
     - src: image filename (required)
     - caption: image caption (optional)
-    - alt: alt text (optional)
-    - maxwidth: max width, default "635px" (optional)
+    - alt: alt text (optional, falls back to caption or filename)
+    - maxwidth: CSS max-width, default "635px" (optional)
     - float: "left" or "right" (optional)
 */}}
 
 {{- $src := .Get "src" -}}
-{{- $alt := .Get "alt" | default "" -}}
 {{- $caption := .Get "caption" | default "" -}}
+{{- $alt := .Get "alt" | default $caption | default (path.BaseName $src) -}}
 {{- $maxwidth := .Get "maxwidth" | default "635px" -}}
 {{- $float := .Get "float" | default "" -}}
 
-{{- $style := printf "max-width: %s; border: 8px solid #FFF;" $maxwidth -}}
-{{- if eq $float "right" -}}
-  {{- $style = printf "%s float: right; margin: 0 0 20px 20px;" $style -}}
-{{- else if eq $float "left" -}}
-  {{- $style = printf "%s float: left; margin: 0 20px 20px 0;" $style -}}
+{{/* Try to get image from page resources for optimization */}}
+{{- $image := .Page.Resources.GetMatch $src -}}
+{{- $imgSrc := $src -}}
+
+{{- if $image -}}
+  {{/* Resize large images to max 1200px width, convert to WebP */}}
+  {{- if gt $image.Width 1200 -}}
+    {{- $image = $image.Resize "1200x webp" -}}
+  {{- else -}}
+    {{- $image = $image.Process "webp" -}}
+  {{- end -}}
+  {{- $imgSrc = $image.RelPermalink -}}
 {{- end -}}
 
-<figure class="styled-image{{ with $float }} float-{{ . }}{{ end }}">
-  <img src="{{ $src }}" alt="{{ $alt }}" style="{{ $style }}" />
+<figure class="styled-image{{ with $float }} float-{{ . }}{{ end }}"{{ if ne $maxwidth "635px" }} style="--img-max-width: {{ $maxwidth }}"{{ end }}>
+  <img src="{{ $imgSrc }}" alt="{{ $alt }}" loading="lazy" />
   {{- with $caption }}
   <figcaption class="cap">{{ . }}</figcaption>
   {{- end }}

@@ -8,7 +8,7 @@
 
 {{- $location := .Get "location" | default "Unknown" -}}
 {{- $timezone := .Get "timezone" | default "Unknown" -}}
-{{- $date := .Page.Date | time.Format "January 2, 2006" -}}
+{{- $date := .Page.Date | time.Format ":date_long" -}}
 
 <div class="now-page-meta">
   <div class="meta-item">
@@ -26,5 +26,5 @@
     <p class="property">{{ $date }}</p>
   </div>
   
-  <div id="globeViz"></div>
+  <div id="globeViz"{{- with .Page.Params.latitude }} data-latitude="{{ . }}"{{- end }}{{- with .Page.Params.longitude }} data-longitude="{{ . }}"{{- end }}></div>
 </div>

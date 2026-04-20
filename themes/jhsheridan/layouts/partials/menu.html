@@ -22,18 +22,18 @@ Renders a menu for the given menu ID.
   {{- $page := .page }}
   {{- range .menuEntries }}
     {{- $url := .URL }}
-    {{- /* For "Now" menu item, dynamically get the latest now post */}}
-    {{- if eq .Name "Now" }}
-      {{- $nowSection := site.GetPage "/now" }}
-      {{- with $nowSection }}
-        {{- $latestNow := index (where .Pages "Draft" false) 0 }}
-        {{- with $latestNow }}
+    {{- /* Link to latest post in section if linkLatest param is set */}}
+    {{- if .Params.linkLatest }}
+      {{- $section := site.GetPage .PageRef }}
+      {{- with $section }}
+        {{- $latest := index (where .Pages "Draft" false) 0 }}
+        {{- with $latest }}
           {{- $url = .RelPermalink }}
         {{- end }}
       {{- end }}
     {{- end }}
     {{- $attrs := dict "href" $url }}
-    {{- if $page.IsMenuCurrent .Menu . }}
+    {{- if or ($page.IsMenuCurrent .Menu .) (and .Params.linkLatest ($page.IsDescendant (site.GetPage .PageRef))) }}
       {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}

@@ -1,0 +1,18 @@
+{{/*
+  Workload progress bar section
+
+  Parameters:
+    - title: section heading (required)
+    - value: progress value (required)
+    - max: progress max (optional, default 100)
+*/}}
+
+{{- $title := .Get "title" -}}
+{{- $value := .Get "value" -}}
+{{- $max := .Get "max" | default "100" -}}
+
+<div class="workload container">
+  <h2>{{ $title }}</h2>
+  <progress value="{{ $value }}" max="{{ $max }}" style="--value: {{ $value }}; --max: {{ $max }};"></progress>
+  <p>{{ .Inner }}</p>
+</div>

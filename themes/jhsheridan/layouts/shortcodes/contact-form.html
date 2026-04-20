@@ -1,0 +1,39 @@
+{{/*
+  Contact form shortcode
+
+  Parameters:
+    - action: form submission URL (required)
+    - title: form heading (optional, default "Use this form to reach me directly")
+    - subtitle: text below heading (optional)
+*/}}
+
+{{- $action := .Get "action" -}}
+{{- $title := .Get "title" | default "Use this form to reach me directly" -}}
+{{- $subtitle := .Get "subtitle" | default "" -}}
+
+<div class="contact-form">
+  <h3>{{ $title }}</h3>
+  {{- with $subtitle }}
+  <p>{{ . }}</p>
+  {{- end }}
+
+  <form class="contact-page" method="post" action="{{ $action }}">
+    <div class="form-fields">
+      <div class="name-field">
+        <label for="name">Name</label>
+        <input class="name" type="text" name="name" placeholder="Jane Doe" required>
+      </div>
+      <div class="email-field">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="JaneDoe@email.com" required>
+      </div>
+      <div class="message-field">
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Hi John... I have a project I'd like to discuss..."></textarea>
+      </div>
+    </div>
+    <div class="button-field">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
