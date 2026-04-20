@@ -26,4 +26,3 @@ After 6 days at sea on the Queen Mary 2, and a very brief stop in London, Briana
 Ut varius tincidunt libero. Curabitur turpis. Praesent vestibulum dapibus nibh. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.
 
 {{< img src="porch.jpg" caption="Views from our Lisbon apartment" >}}
-

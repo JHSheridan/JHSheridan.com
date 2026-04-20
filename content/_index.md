@@ -4,45 +4,19 @@ date = 2023-01-01T08:00:00-07:00
 draft = false
 +++
 
-<!-- ## The desk of John H. Sheridan -->
+{{< teaser href="/now/" emoji="🌎" title="Now" cta="See where I am now" >}}
+I spend about 9 months of the year in the Great Smoky Mountains<br />of western North Carolina and about 3 months abroad.
+{{< /teaser >}}
 
-<a href="/now/" class="teaser">
+{{< teaser href="/work/" emoji="💻" title="Work" cta="Check out my portfolio" >}}
+I've been building things professionally on the internet for 20 years,<br />and I can build something for you too.
+{{< /teaser >}}
 
-  <h2 class="home-section-title"><span class="emoji">🌎 </span>Now</h2>
+{{< teaser href="/about/" emoji="🙋‍♂️" title="About" cta="More about me personally" >}}
+Who I am outside of work.
+{{< /teaser >}}
 
-  I spend about 9 months of the year in the Great Smoky Mountains<br />of western North Carolina and about 3 months abroad.
-
-  <p><span class="cta">See where I am now</span> <span class="arrow">&rarr;</span></p>
-
-</a>
-
-<a href="/work/" class="teaser">
-
-  ### <span class="emoji">💻 </span>Work
-
-  I've been building things professionally on the internet for 20 years,<br />and I can build something for you too. <!-- Let me help with your next project. -->
-
-  <p><span class="cta">Check out my portfolio</span> <span class="arrow">&rarr;</span></p>
-
-</a>
-
-<a href="/about/" class="teaser">
-
-  ### <span class="emoji">🙋‍♂️ </span>About
-
-  Who I am outside of work.
-
-  <p><span class="cta">More about me personally</span> <span class="arrow">&rarr;</span></p>
-
-</a>
-
-<a href="/contact/" class="teaser">
-
-  ### <span class="emoji">👋️ </span>Contact
-
-  Every way to get in touch with me.
-
-  <p><span class="cta">I'm easy to reach</span> <span class="arrow">&rarr;</span></p>
-
-</a>
+{{< teaser href="/contact/" emoji="👋️" title="Contact" cta="I'm easy to reach" >}}
+Every way to get in touch with me.
+{{< /teaser >}}
 
