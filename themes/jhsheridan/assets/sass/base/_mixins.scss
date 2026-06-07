@@ -1,7 +1,2 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+// Shared SCSS mixins.
+// (clearfix removed — the header now uses flexbox instead of floats.)

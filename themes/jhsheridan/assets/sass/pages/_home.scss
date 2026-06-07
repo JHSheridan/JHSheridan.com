@@ -1,6 +1,6 @@
 .teaser {
   margin: 0 0 0px -20px;
-  padding: 2px 0 8px 20px;
+  padding: 2px 0 0px 20px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
   max-width: 560px;
@@ -16,6 +16,11 @@
   span.emoji {
     font-size: 20px;
     vertical-align: 0.15em;
+  }
+
+  .teaser-body {
+    margin: 0;
+    max-width: none;
   }
 
   .cta {

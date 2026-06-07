@@ -19,7 +19,7 @@ body {
   // Default Font Settings
   font-family: Magdelin;
   font-size: 20px;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 // Base Typography
@@ -35,8 +35,9 @@ h1, h2, h3, h4, h5 {
 
 .page-title {
   font-size: 36px;
+  line-height: 1.15;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 h1 {
@@ -46,7 +47,7 @@ h1 {
 h2 {
   font-size: 29px;
   margin-top: 15px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 h3 {
@@ -62,7 +63,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 12px 0;
+  margin: 0 0 17px 0;
   max-width: 30em;
 }
 

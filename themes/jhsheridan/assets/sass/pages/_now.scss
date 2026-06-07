@@ -1,8 +1,16 @@
 .now-page-meta {
+  position: relative;           // positioning context for the globe
   display: flex;
+  flex-wrap: wrap;
   column-gap: 30px;
-  margin: -89px 0 -80px 0;
   justify-content: space-between;
+  margin-top: 20px;
+
+  @media only screen and (min-width: 1100px) {
+    flex-wrap: nowrap;
+    margin-top: 6px;            // lands the block top on the name line (206px)
+    padding-right: 255px;       // reserve the right edge for the globe
+  }
 
   .meta-item {
     align-content: center;
@@ -39,6 +47,16 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+
+    // Desktop: lift out of flow so its height stops dictating the layout
+    // (this is what the old -89/-80 negative margins were fighting).
+    // Declared after `position: relative` so it wins the cascade at >=1100px.
+    @media only screen and (min-width: 1100px) {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);   // center the globe on the meta row
+    }
     
     &::before {
       content: '🌍';

@@ -1,22 +1,30 @@
 #site-header {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
   width: 100%;
   padding: 25px 0 35px 0;
 
   @media only screen and (min-width: 1100px) {
-    display: block;
+    flex-direction: column;
+    align-items: flex-end;        // right-align the sidebar stack
+    gap: 0;                       // spacing handled per-item below
     border-right: 1px solid rgba(255,255,255, 0.1);
-    border-bottom: none;
-    padding: 65px 0 0 0;
-    margin-top: 68px;
+    padding: 65px 0 0 0;          // 65 + margin-top 68 lands the portrait
+    margin-top: $sidebar-top;
   }
 
+  // Portrait + name stack: a row on mobile, a right-aligned column on desktop
   #banner {
-    @include clearfix;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
     @media only screen and (min-width: 1100px) {
-      float: right;
-      padding-right: 50px;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0;
+      padding-right: $gutter;      // hold content off the divider
     }
   }
 
@@ -24,24 +32,17 @@
     display: none;
     @media only screen and (min-width: 350px) {
       display: block;
-      float: left;
       max-width: 45px;
     }
     @media only screen and (min-width: 1100px) {
-      float: right;
       max-width: 60px;
     }
   }
 
   .name-description {
-    float: left;
-    @media only screen and (min-width: 350px) {
-      padding: 0 0 0 10px;
-    }
     @media only screen and (min-width: 1100px) {
-      float: right;
-      clear: both;
       margin-top: 7px;
+      text-align: right;
     }
 
     .site-name {
@@ -86,52 +87,48 @@
 #full-menu {
   display: none;
 
-  flex-grow: 1; //tells menu to grow to fill remaining space to the right of the banner
   @media only screen and (min-width: 700px) {
-    display: block;
+    display: flex;
+    flex-grow: 1;              // fill the space to the right of the banner
+    justify-content: flex-end;
   }
   @media only screen and (min-width: 1100px) {
-    float: right;
-    clear: both;
-    padding-right: 50px;
+    flex-grow: 0;              // in the sidebar column, shrink to content
+    padding-right: $gutter;
     margin-top: 20px;
   }
 
-  nav {
-    float: right; 
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 13px 0 0 0;
+    display: flex;              // mobile/medium: horizontal row (was li floats)
+
     @media only screen and (min-width: 1100px) {
-      float: none;
+      display: block;           // desktop: vertical stack, right-aligned
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 13px 0 0 0;
+    li {
+      margin-left: 20px;
+      @media only screen and (min-width: 1100px) {
+        text-align: right;
+        margin-bottom: 10px;
+      }
 
-      li {
-	float: left;
-	margin-left: 20px;
-	@media only screen and (min-width: 1100px) {
-	  float: none;
-	  text-align: right;
-	  margin-bottom: 10px;
-	}
+      a {
+        color: $white;
+        text-decoration: none;
+        @media only screen and (min-width: 1100px) {
+          font-size: 21px;
+          opacity: 0.8;
 
-	a {
-	  color: $white;
-	  text-decoration: none;
-	  @media only screen and (min-width: 1100px) {
-	    font-size: 21px; 
-	    opacity: 0.8;
-
-	    &:hover { opacity: 1; }
-	  }
-	}
-	.active {
-	  font-weight: 500;
-	  text-decoration: underline;
-	  opacity: 1;
-	}
+          &:hover { opacity: 1; }
+        }
+      }
+      .active {
+        font-weight: 500;
+        text-decoration: underline;
+        opacity: 1;
       }
     }
   }
