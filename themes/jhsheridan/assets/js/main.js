@@ -19,7 +19,6 @@ function initializeGlobe() {
         .backgroundColor('rgba(0,0,0,0)')
         .width('225')
         .height('225')
-        .pointOfView({ lat: lat, lng: lng, altitude: 1.7 }, 100)
         .ringsData([{
             lat: lat, // Latitude for the ring
             lng: lng, // Longitude for the ring
@@ -33,16 +32,15 @@ function initializeGlobe() {
         .ringRepeatPeriod('repeatPeriod')
         (globeElement);
 
+        // Point the camera at the location once the scene is mounted.
+        // (globe.gl runs its own render loop, so no manual animate loop is
+        // needed — and a manual one would override this camera tween.)
+        requestAnimationFrame(() => {
+            globe.pointOfView({ lat: lat, lng: lng, altitude: 1.7 });
+        });
+
         // Mark as loaded to hide loading state
         globeElement.classList.add('loaded');
-
-        // Add animation
-        function animate() {
-            requestAnimationFrame(animate);
-            globe.controls().update();
-            globe.renderer().render(globe.scene(), globe.camera());
-        }
-        animate();
     } catch (error) {
         console.error('Error initializing globe:', error);
         // Keep the loading state visible if there's an error
