@@ -3,10 +3,20 @@
   <h1 class="page-title">{{ .Title }}</h1>
   {{ .Content }}
 
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    <p>{{ $dateHuman }}</p>
-  {{ end }}
+  <div class="now-archive">
+    {{ range .Pages }}
+      {{ $img := index (.Resources.ByType "image") 0 }}
+      <a href="{{ .RelPermalink }}" class="now-card">
+        {{ with $img }}
+          {{ $thumb := .Fill "600x360 webp" }}
+          <img src="{{ $thumb.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" />
+        {{ end }}
+        <div class="now-card-body">
+          <h2 class="now-card-title">{{ .LinkTitle }}</h2>
+          <p class="now-card-date">{{ .Date | time.Format ":date_long" }}</p>
+        </div>
+      </a>
+    {{ end }}
+  </div>
 
-{{ end }} 
+{{ end }}

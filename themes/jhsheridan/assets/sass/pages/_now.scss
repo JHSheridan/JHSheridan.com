@@ -144,3 +144,52 @@
 
   }
 }
+
+
+// Now archive — card grid
+.now-archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.now-card {
+  display: block;
+  text-decoration: none;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+  }
+
+  .now-card-body {
+    padding: 13px 16px 16px;
+  }
+
+  .now-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .now-card-date {
+    font-size: 15px;
+    color: #989B9D;
+    margin: 3px 0 0 0;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+}
