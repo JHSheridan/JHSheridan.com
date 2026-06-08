@@ -1,22 +1,21 @@
 .page-meta {
   display: flex;
+  align-items: center;     // vertically center the button with the meta items
   column-gap: 50px;
-  margin: -35px 0 18px 0;
+  margin: -13px 0 18px 0;
 
   .meta-item {
-    align-content: center;
-    padding-top: 13px;
+    p { margin: 0; }   // drop the inherited paragraph margin on label + property
 
     .label {
       text-transform: uppercase;
-      font-size: 14px;
-      margin-bottom: 0 !important;
+      font-size: 13px;
       color: rgba(232,230,228,.60);
     }
-  }
 
-  .meta-item-button {
-    padding-top: 0;
+    .property {
+      font-size: 18px;
+    }
   }
 }
 
@@ -31,11 +30,11 @@
 
 .container {
   border-bottom: 1px solid rgba(255,255,255,.1);
-  padding: 20px 0 30px 0;
+  padding: 12px 0 30px 0;
 }
 
 .workload {
-  padding: 5px 0 30px 0;
+  padding: 5px 0 20px 0;
 
   h2 {
     margin: 0;
