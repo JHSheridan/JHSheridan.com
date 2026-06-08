@@ -1,7 +1,5 @@
 +++
-title = 'Now'
+title = 'All Now Pages'
 date = 2023-01-01T08:30:00-07:00
 draft = false
 +++
-
-# Now Page Archive

@@ -3,6 +3,11 @@ languageCode: en-us
 title: John H. Sheridan
 theme: jhsheridan
 
+# No taxonomies — this site doesn't use tags or categories
+disableKinds:
+  - taxonomy
+  - term
+
 params:
   description:
     - "Programmer, Designer,"

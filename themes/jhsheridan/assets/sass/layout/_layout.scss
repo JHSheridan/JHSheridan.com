@@ -41,8 +41,12 @@
 // name's baseline. See the $main-top-* notes in _variables.scss.
 @media only screen and (min-width: 1100px) {
   body.home            #site-main { padding-top: $main-top-home; }
-  body.section-about   #site-main { padding-top: $main-top-about; }
+  body.section-about   #site-main { padding-top: $main-top-default; }
   body.section-work    #site-main { padding-top: $main-top-default; }
   body.section-contact #site-main { padding-top: $main-top-default; }
   body.section-now     #site-main { padding-top: $main-top-default; }
+
+  // About: tighten the title's bottom margin to control the gap down to the
+  // body (global default is 36px).
+  body.section-about .page-title { margin-bottom: 25px; }
 }
